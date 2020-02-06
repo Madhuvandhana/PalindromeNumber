@@ -1,5 +1,5 @@
 class PalindromeInt {
-    public boolean isPalindrome(int x) {
+    public boolean isPalindromeMethod1(int x) {
         int result = 0;
         if(x < 0)
             return false;
@@ -14,6 +14,26 @@ class PalindromeInt {
             return true;
         else
             return false;
+        
+    }
+    
+    public boolean isPalindromeMethod2(int x) {
+        int result = 0;
+        int a = x;
+        if(x < 0)
+            return false;
+        
+        while(a > 0){
+            result = result * 10 + a % 10;
+            a = a/10;
+        }
+ 
+       
+        if(result == x)
+            return true;
+        else
+            return false;
+        
         
     }
 }
